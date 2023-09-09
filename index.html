@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reza - Beginner Fullstack Developer</title>
+    <link
+      rel="shortcut icon"
+      href="/dist/img/images1.png"
+      type="image/x-icon"
+    />
+
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body class="">
+    <!--Navbar Start-->
+
+    <header
+      class="sticky text-white top-0 left-0 w-full flex items-center z-10 2xl:ring-2 ring-1 ring-black/5 backdrop-blur-sm bg-white/30 border-slate-500/50 2xl:rounded-full 2xl:mt-5 2xl:top-3 2xl:w-1/2 2xl:items-center 2xl:left-[50vh]"
+      id="header"
+    >
+      <div class="container hidden">
+        <div class="flex items-center justify-evenly">
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="humburger"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="transition duration-300 ease-in-out origin-top-left"
+              ></span>
+              <span class="transition duration-300 ease-in-out"></span>
+              <span
+                class="transition duration-300 ease-in-out origin-top-left"
+              ></span>
+            </button>
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    ><div class="pr-2">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 24 24"
+                        height="20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm9-8.586 6 6V15l.001 5H6v-9.586l6-6z"
+                        ></path>
+                        <path
+                          d="M12 18c3.703 0 4.901-3.539 4.95-3.689l-1.9-.621c-.008.023-.781 2.31-3.05 2.31-2.238 0-3.02-2.221-3.051-2.316l-1.899.627C7.099 14.461 8.297 18 12 18z"
+                        ></path>
+                      </svg>
+                    </div>
+                    Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    ><div class="pr-2">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 24 24"
+                        height="20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="m21.88 2.15-1.2.4a13.84 13.84 0 0 1-6.41.64 11.87 11.87 0 0 0-6.68.9A7.23 7.23 0 0 0 3.3 9.5a8.65 8.65 0 0 0 1.47 6.6c-.06.21-.12.42-.17.63A22.6 22.6 0 0 0 4 22h2a30.69 30.69 0 0 1 .59-4.32 9.25 9.25 0 0 0 4.52 1.11 11 11 0 0 0 4.28-.87C23 14.67 22 3.86 22 3.41zm-7.27 13.93c-2.61 1.11-5.73.92-7.48-.45a13.79 13.79 0 0 1 1.21-2.84A10.17 10.17 0 0 1 9.73 11a9 9 0 0 1 1.81-1.42A12 12 0 0 1 16 8V7a11.43 11.43 0 0 0-5.26 1.08 10.28 10.28 0 0 0-4.12 3.65 15.07 15.07 0 0 0-1 1.87 7 7 0 0 1-.38-3.73 5.24 5.24 0 0 1 3.14-4 8.93 8.93 0 0 1 3.82-.84c.62 0 1.23.06 1.87.11a16.2 16.2 0 0 0 6-.35C20 7.55 19.5 14 14.61 16.08z"
+                        ></path>
+                      </svg>
+                    </div>
+                    About</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#portofolio"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    ><div class="pr-2">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 24 24"
+                        height="20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="m21.706 5.291-2.999-2.998A.996.996 0 0 0 18 2H6a.996.996 0 0 0-.707.293L2.294 5.291A.994.994 0 0 0 2 5.999V19c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5.999a.994.994 0 0 0-.294-.708zM6.414 4h11.172l.999.999H5.415L6.414 4zM4 19V6.999h16L20.002 19H4z"
+                        ></path>
+                        <path d="M15 12H9v-2H7v4h10v-4h-2z"></path>
+                      </svg>
+                    </div>
+                    Portofolio</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#skill"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    ><div class="pr-2">
+                      <svg
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        height="20"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width="8" height="8" x="3" y="3" rx="2"></rect>
+                        <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
+                        <rect width="8" height="8" x="13" y="13" rx="2"></rect>
+                      </svg>
+                    </div>
+                    Skill</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Navbar End-->
+
+    <!--Hero Start-->
+    <section class="bg-[#0d071a]" id="hero">
+      <div class="py-36 pb-32 px-4 mx-auto max-w-screen-xl text-left">
+        <div class="px-4">
+          <h1 class="text-white p-1 text-lg md:text-xl lg:text-2xl">
+            hi everyone 👋
+          </h1>
+
+          <h1
+            class="mb-4 text-5xl font-extrabold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-tr from-cyan-500 from-[1%] to-fuchsia-500 to-100% md:text-7xl lg:text-8xl"
+          >
+            reza adi n.
+          </h1>
+          <h1
+            class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl"
+          >
+            a happy beginner fullstack developer.
+          </h1>
+          <p class="text-lg font-normal flex text-gray-400 lg:text-xl">
+            1 years of experience learning coding
+            <span class="text-white -ml-24 mt-6 md:ml-0 -rotate-[0deg]"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="45px"
+                height="45px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M7 7L17 17M17 17V7M17 17H7"
+                  stroke="#ffffff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></span>
+            <span class="-rotate-[25deg] mt-8 mb-10 -ml-6 flex lg:mb-0"
+              >Masih Pemula🙇‍♂️</span
+            >
+          </p>
+
+          <div
+            class="flex flex-col space-y-4 sm:justify-center sm:space-y-0 sm:space-x-4"
+          >
+            <a
+              href="https://github.com/ryznoxy"
+              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center md:w-[200px] rounded-xl border border-gay-300 hover:bg-gradient-to-br from-black from-50% to-purple-500 focus:ring-4 focus:ring-gray-100 text-white hover:scale-105 transition ease-in-out"
+            >
+              Github
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Hero end-->
+
+    <!--About Me Start-->
+    <section class="bg-gradient-to-b from-[#0d071a] from-30% to-purple-900">
+      <div class="pt-36 pb-32 px-4 py-8 mx-auto max-w-screen-xl">
+        <div class="container">
+          <div class="flex items-center justify-center">
+            <div class="w-full px-4">
+              <div class="flex flex-col bg-[#0d071a] p-4 rounded-3xl">
+                <h1 class="text-4xl md:text-6xl text-white font-extrabold p-4">
+                  🚀about me
+                </h1>
+
+                <h1
+                  class="text-4xl md:text-5xl text-transparent font-bold p-4 bg-clip-text bg-gradient-to-tr from-purple-500 to-blue-500"
+                >
+                  who am i ?
+                </h1>
+
+                <div class="">
+                  <h1 class="text-xl md:text-2xl text-white font-medium p-4">
+                    I'm a beginner fullstack developer. my dedication to
+                    continuously learning about fullstack dev and learning new
+                    web design trends and concepts has made him a valuable
+                    member of the team.
+                  </h1>
+                </div>
+                <div class="py-2 px-4 mb-4">
+                  <h1
+                    class="text-white font-medium text-2xl text-center lg:text-3xl my-6"
+                  >
+                    let us be connected
+                  </h1>
+                  <div class="flex justify-center gap-8 items-center mx-5 mb-8">
+                    <div class="w-6 lg:w-8">
+                      <a href="http://tiktok.com/@ryznoxy" target="_blank">
+                        <svg
+                          stroke="#ffffff"
+                          fill="#ffffff"
+                          stroke-width="0"
+                          viewBox="0 0 16 16"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"
+                          ></path></svg
+                      ></a>
+                    </div>
+                    <div class="w-6 lg:w-8">
+                      <a href="http://youtube.com/@ryznoxy" target="_blank">
+                        <svg
+                          stroke="#ffffff"
+                          fill="#ffffff"
+                          stroke-width="0"
+                          viewBox="0 0 16 16"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+                          ></path></svg
+                      ></a>
+                    </div>
+                    <div class="w-6 lg:w-8">
+                      <a
+                        href="https://discord.com/users/274076893240754176"
+                        target="_blank"
+                      >
+                        <svg
+                          stroke="#ffffff"
+                          fill="#ffffff"
+                          stroke-width="0"
+                          viewBox="0 0 16 16"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"
+                          ></path></svg
+                      ></a>
+                    </div>
+                    <div class="w-6 lg:w-8">
+                      <a href="https://instagram.com/r7zaa_" target="_blank">
+                        <svg
+                          stroke="#ffffff"
+                          fill="#ffffff"
+                          stroke-width="0"
+                          viewBox="0 0 16 16"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                          ></path></svg
+                      ></a>
+                    </div>
+                    <div class="w-6 lg:w-8">
+                      <a href="https://github.com/ryznoxy" target="_blank">
+                        <svg
+                          stroke="#ffffff"
+                          fill="#ffffff"
+                          stroke-width="0"
+                          viewBox="0 0 16 16"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                          ></path></svg
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--About Me End-->
+
+    <!--Skills start-->
+    <section
+      class="bg-gradient-to-b from-purple-900 to-[#0d071a] pt-36 pb-32 px-4 py-8"
+    >
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16">
+            <h4 class="mb-4 text-3xl lg:text-6xl font-extrabold">
+              👨‍💻
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-tl from-sky-500 to-emerald-500"
+                >my skills.</span
+              >
+            </h4>
+            <h2
+              class="mb-4 text-3xl font-semibold text-white sm:text-4xl lg:text-5xl"
+            >
+              my coding skills
+            </h2>
+          </div>
+        </div>
+
+        <div class="w-full">
+          <div class="flex flex-wrap items-center justify-center">
+            <a href="#" class="mx-4 max-w-[110px] p-4 lg:mx-6 xl:mx-8">
+              <svg
+                stroke="#3b82f6"
+                fill="#3b82f6"
+                stroke-width="0"
+                role="img"
+                viewBox="0 0 24 24"
+                class="text-blue-500"
+                height="100%"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title></title>
+                <path
+                  d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="mx-4 max-w-[110px] p-4 lg:mx-6 xl:mx-8"
+              ><svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                role="img"
+                viewBox="0 0 24 24"
+                class="text-orange-500"
+                height="100%"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title></title>
+                <path
+                  d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="mx-4 max-w-[110px] p-4 lg:mx-6 xl:mx-8">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                role="img"
+                viewBox="0 0 24 24"
+                class="text-yellow-400"
+                height="100%"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title></title>
+                <path
+                  d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="mx-4 max-w-[110px] p-4 lg:mx-6 xl:mx-8">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                role="img"
+                viewBox="0 0 24 24"
+                class="text-cyan-300"
+                height="100%"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title></title>
+                <path
+                  d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="mx-4 max-w-[110px] p-4 lg:mx-6 xl:mx-8">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                class="text-purple-500"
+                height="100%"
+                width="100%"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z"
+                ></path>
+                <path
+                  d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Skills end-->
+
+    <!--Portfolio start-->
+    <section
+      id="portfolio"
+      class="bg-gradient-to-b from-[#0d071a] from-60% to-purple-900 pt-36 pb-32 px-4 py-8"
+    >
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16">
+            <h4 class="mb-4 text-4xl lg:text-5xl font-bold text-white">
+              ✍
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-tl from-lime-500 to-cyan-500"
+                >portfolio</span
+              >
+            </h4>
+            <h2 class="mb-4 text-4xl font-semibold text-white lg:text-5xl">
+              lastest projects
+            </h2>
+          </div>
+        </div>
+
+        <div
+          class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12 bg-[#0d071a] pt-12 rounded-3xl"
+        >
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/portofolio/pohonlink.png" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-white">
+              pohonlink
+            </h3>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img
+                src="dist/img/portofolio/portfoliotailwind.png"
+                width="w-full"
+              />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-white">
+              portolio tailwind
+            </h3>
+          </div>
+          <div class="mb-8 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/portofolio/ryznext.png" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-white">
+              portfolio nextjs
+            </h3>
+          </div>
+          <div class="mb-8 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/portofolio/malas.png" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-white">gtw</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Portfolio end-->
+    <!--Contact me start-->
+    <section
+      class="bg-gradient-to-b from-purple-900 from-10 to-[#0d071a] to-90% pt-32 pb-10 px-4 py-8"
+      id="contact"
+    >
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-6"></div>
+          <div class="w-full">
+            <h1
+              class="text-4xl font-semibold mb-16 lg:text-5xl"
+              data-aos="zoom-in"
+              data-aos-delay="2200"
+            >
+              🤝
+              <span
+                class="bg-gradient-to-b from-sky-500 to-slate-300 bg-clip-text text-transparent"
+                >Let's get in touch</span
+              >
+            </h1>
+            <h1
+              class="text-4xl font-semibold lg:text-6xl mb-4"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <span
+                class="bg-gradient-to-b from-sky-500 to-slate-300 bg-clip-text text-transparent"
+                >mau ngopi bareng?, or want to study together?
+              </span>
+            </h1>
+            <h1
+              class="text-4xl font-semibold mb-4 lg:text-7xl"
+              data-aos="fade-up"
+              data-aos-delay="800"
+            >
+              <span
+                class="bg-gradient-to-b from-sky-500 to-slate-300 bg-clip-text text-transparent"
+                >have any project ideas?
+              </span>
+            </h1>
+            <h1
+              class="text-4xl font-semibold lg:text-7xl mb-4"
+              data-aos="fade-up"
+              data-aos-delay="1200"
+            >
+              <span
+                class="bg-gradient-to-b from-sky-500 to-slate-300 bg-clip-text text-transparent"
+                >ask something?
+              </span>
+            </h1>
+            <div
+              class="text-white mt-12 flex items-center"
+              data-aos="zoom-in"
+              data-aos-delay="2200"
+            >
+              <div class="sm:flex sm:flex-warp mt-4 gap-5">
+                <img
+                  src="/dist/img/images1.png"
+                  alt=""
+                  class="w-32 h-32 bg-white rounded-full"
+                />
+                <div class="flex my-4 flex-col">
+                  <h1 class="text-2xl lg:mb-6 mb-2 lg:-mt-4">contact me via</h1>
+                  <a
+                    href="mailto:rezaanreza27@gmail.com"
+                    class="flex gap-2 items-center text-2xl"
+                    ><span class=""
+                      ><svg
+                        class="fill-current w-5 h-5"
+                        role="img"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>Gmail</title>
+                        <path
+                          d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                        ></path></svg></span
+                    >reza@gmail.com</a
+                  >
+
+                  <a
+                    href="https://instagram/r7zaa_"
+                    class="flex gap-2 items-center text-2xl"
+                    ><span
+                      ><svg
+                        class="w-5 h-5"
+                        stroke="#ffffff"
+                        fill="#ffffff"
+                        stroke-width="0"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                        ></path></svg
+                    ></span>
+                    @r7zaa_</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Contact me end-->
+    <footer class="pb-10 px-4 bg-[#0d071a] text-slate-500">
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="px-4 w-full"></div>
+        <h1 class="ml-4">©2023 Made with ☕ by ryznoxy</h1>
+      </div>
+    </footer>
+
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
